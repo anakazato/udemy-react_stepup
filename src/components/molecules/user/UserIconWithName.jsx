@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import styled from "styled-components";
-
+import { UserContext } from "../../../providers/UserProvider";
 
 export const UserIconWithName =(props) => {
     const { image, name , isAdmin } = props;
+    const context = useContext(UserContext);    // UserProvider.jsxでexportしたUserContext を指定して利用できるようにする
+    console.log(context);
+    
     return (
         <SContainer>
             <SImg height={160} width={160} src={image} alt={name} />
