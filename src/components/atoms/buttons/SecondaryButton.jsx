@@ -3,9 +3,9 @@ import {BaseButton} from "./BaseButton";
 
 export const SecondaryButton = (props) => {
     // children : <PrimaryButton>ああああ</PrimaryButton> とやってタグ内のコンテンツを受け取れるように
-    const { children} = props;
+    const { children , onClick} = props;
     return (
-        <SButton>{children}</SButton>
+        <SButton onClick={onClick}>{children}</SButton>
     );
 };
 
